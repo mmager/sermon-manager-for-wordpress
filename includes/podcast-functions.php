@@ -75,7 +75,7 @@ function wpfc_podcast_add_item(){
 	<?php if ( $post_image ) : ?>
 	<itunes:image href="<?php echo $post_image; ?>" />
 	<?php endif; ?>
-	<?php if ( $audio == '' ) : ?>
+	<?php if ( $audio != '' ) : ?>
 		<enclosure url="<?php echo $audio; ?>" length="0" type="audio/mpeg"/>
 	<?php endif; ?>
 	<itunes:duration><?php echo esc_html( $audio_duration ); ?></itunes:duration>
